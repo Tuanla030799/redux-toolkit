@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 
-const URL_API = process.env.URL_API || "http://localhost:4000/api";
+const URL_API = process.env.URL_API || "http://localhost:3000";
 
 const request = axios.create({
   baseURL: URL_API,

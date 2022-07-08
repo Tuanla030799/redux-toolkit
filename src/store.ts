@@ -7,7 +7,7 @@ const makeStore = () =>
     reducer: {
       [profile.name]: profile.reducer
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+    middleware: [thunkMiddleware],
     devTools: process.env.NODE_ENV === "development",
   });
 

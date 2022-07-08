@@ -10,15 +10,17 @@ const HomePage = () => {
 
     useEffect(() => {
         dispatch(fetchProfileList());
-      }, [dispatch]);
+    }, [dispatch]);
+
+    console.log("first", profiles)
     return (
         <div>
             {(profiles || []).map((profile: Profile) => {
                 return (
                     <div key={profile.id}>
-                        <span>name: {profile.name}</span>
-                        <span>gender: {profile.gender}</span>
-                        <span>age: {profile.age}</span>
+                        <p>name:{profile.name}</p>
+                        <p>gender:{profile.gender}</p>
+                        <p>age:{profile.age}</p>
                     </div>
                 )
             })}
